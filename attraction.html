@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>어트랙션</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">                   <!-- favicon -->
+    <link rel="stylesheet" href="css/reset.css">                                                    <!-- reset -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">                              <!-- index css -->
+    <script src="https://kit.fontawesome.com/11ff5dd105.js" crossorigin="anonymous"></script>       <!-- fontawesome -->
+    <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=2kw5k2e23m"></script><!---->
+    <script src="js/jquery-3.7.1.min.js" type="text/javascript"></script>                           <!-- jquery -->
+    <script src="js/script.js" type="text/javascript" defer></script>                               <!-- js script --> 
+</head>
+<body>
+     <!-- wrap -->
+     <div id="wrap">
+
+        <!-- header -->
+        <header>
+            <div class="header-wrap">
+
+                <!-- logo -->
+                <div class="logo">
+                    <a href="index.html"><img src="img/logo.png" alt="로고" width="200"></a>
+                </div>
+
+                <!-- nav -->
+                <nav>
+                    <ul class="main-menu">
+                        <li><a href="#">즐길거리</a>
+                            <ul class="sub-menu">
+                                <li><a href="attraction.html">어트랙션</a></li>
+                                <li><a href="#">페스티벌</a></li>
+                                <li><a href="#">공연</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">시설정보</a>
+                            <ul class="sub-menu">
+                                <li><a href="#">식음시설</a></li>
+                                <li><a href="#">기프트샵</a></li>
+                                <li><a href="#">편의시설</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">이용요금</a>
+                            <ul class="sub-menu">
+                                <li><a href="card.html">스마트예매</a></li>
+                                <li><a href="#">이달의 할인</a></li>
+                                <li><a href="#">제휴사 할인</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">이용안내</a>
+                            <ul class="sub-menu">
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">주차정보</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- header.etc -->
+                <div class="etc">
+                    <div>
+                        <p class="search-button"><i class="fa-solid fa-magnifying-glass"></i>검색</p>
+                    </div>
+                    <div>
+                        <p><a href="login.html"><i class="fa-solid fa-arrow-right-to-bracket"></i>로그인</a></p>
+                    </div>
+                    <div>
+                        <p><a href="card.html"><i class="fa-solid fa-credit-card"></i>예매</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- nav submenu2 -->
+            <div class="sub-menu2">
+                <div class="box1">
+                    <img src="img/clock.png" alt="시계">
+                    <p class="current-time"></p>
+                    <p>오늘의 파크</p>
+                    <p class="time-bold">운영시간</p>
+                    <p class="time-bold">10:00-21:00</p>
+                </div>
+                <div class="box2">
+                    <a href="#"><img src="img/app.jpg" alt="앱다운로드"></a>
+                </div>
+            </div>
+            <div class="black-box"></div>
+
+            <!-- nav search bar -->
+            <div class="search-bar">
+                <div class="search-wrap">
+                    <input type="text" placeholder="검색어를 입력해주세요."> 
+                    <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+                <div class="close-button"><i class="fa-solid fa-xmark"></i></div>
+            </div>
+        </header>
+
+        <!-- attraction Map -->
+        <div id="attraction-map">
+            <img src="img/map-screen.png" alt="" class="at-main-screen">
+            <h1>에버랜드 지도</h1>
+
+            <!-- naver Map -->
+            <div id="map"></div>
+            <script>
+                var mapOptions = {
+                    center : new naver.maps.LatLng(37.29222, 127.2034),
+                    zoom : 16
+                };
+                var map = new naver.maps.Map('map', mapOptions);
+            </script>   
+        </div>
+
+        <!-- attraction grid -->
+        <div id="attraction-box">
+            <h1>어트랙션</h1>
+            <div id="attraction-grid">
+                <div class="grid-item g1">
+                    <img src="img/attractions/att-01.png" alt="놀이기구">
+                    <div class="att-desc">
+                        <h2 class="att-title">로얄 쥬빌리 캐로셀</h2>
+                        <h3 class="att-time"><i class="fa-regular fa-clock"></i>&nbsp; 09:50 - 22:00</h3>
+                    </div>
+                </div>
+                <div class="grid-item g2">
+                    <img src="img/attractions/att-02.png" alt="놀이기구">
+                    <div class="att-desc">
+                        <h2 class="att-title">레이싱 코스터</h2>
+                        <h3 class="att-time"><i class="fa-regular fa-clock"></i>&nbsp; 14:00 - 22:00</h3>
+                    </div>
+                </div>
+                <div class="grid-item g3">
+                    <img src="img/attractions/att-03.png" alt="놀이기구">
+                    <div class="att-desc">
+                        <h2 class="att-title">롤링 엑스 트레인</h2>
+                        <h3 class="att-time"><i class="fa-regular fa-clock"></i>&nbsp; 09:50 - 22:00</h3>
+                    </div>
+                </div>
+                <div class="grid-item g4">
+                    <img src="img/attractions/att-04.png" alt="놀이기구">
+                    <div class="att-desc">
+                        <h2 class="att-title">아마존 익스프레스</h2>
+                        <h3 class="att-time"><i class="fa-regular fa-clock"></i>&nbsp; 10:30 - 20:30</h3>
+                    </div>
+                </div>
+                <div class="grid-item g5">
+                    <img src="img/attractions/att-05.png" alt="놀이기구">
+                    <div class="att-desc">
+                        <h2 class="att-title">T익스프레스</h2>
+                        <h3 class="att-time"><i class="fa-regular fa-clock"></i>&nbsp; 공사운휴</h3>
+                    </div>
+                </div>
+                <div class="grid-item g6">
+                    <img src="img/attractions/att-06.png" alt="놀이기구">
+                    <div class="att-desc">
+                        <h2 class="att-title">허리케인</h2>
+                        <h3 class="att-time"><i class="fa-regular fa-clock"></i>&nbsp; 우천대기</h3>
+                    </div>
+                </div>
+                <div class="grid-item g7">
+                    <img src="img/attractions/att-07.png" alt="놀이기구">
+                    <div class="att-desc">
+                        <h2 class="att-title">더블 락스핀</h2>
+                        <h3 class="att-time"><i class="fa-regular fa-clock"></i>&nbsp; 우천대기</h3>
+                    </div>
+                </div>
+                <div class="grid-item g8">
+                    <img src="img/attractions/att-08.png" alt="놀이기구">
+                    <div class="att-desc">
+                        <h2 class="att-title">렛츠 트위스트</h2>
+                        <h3 class="att-time"><i class="fa-regular fa-clock"></i>&nbsp; 우천대기</h3>
+                    </div>
+                </div>
+                <div class="grid-item g9">
+                    <img src="img/attractions/att-09.png" alt="놀이기구">
+                    <div class="att-desc">
+                        <h2 class="att-title">콜럼버스 대탐험</h2>
+                        <h3 class="att-time"><i class="fa-regular fa-clock"></i>&nbsp; 우천대기</h3>
+                    </div>
+                </div>
+                <div class="grid-item g10">
+                    <img src="img/attractions/att-10.png" alt="놀이기구">
+                    <div class="att-desc">
+                        <h2 class="att-title">피터팬</h2>
+                        <h3 class="att-time"><i class="fa-regular fa-clock"></i>&nbsp; 09:50 - 22:00</h3>
+                    </div>
+                </div>
+                <div class="grid-item g11">
+                    <img src="img/attractions/att-11.png" alt="놀이기구">
+                    <div class="att-desc">
+                        <h2 class="att-title">썬더폴스</h2>
+                        <h3 class="att-time"><i class="fa-regular fa-clock"></i>&nbsp; 13:00 - 20:30</h3>
+                    </div>
+                </div>
+                <div class="grid-item g12">
+                    <img src="img/attractions/att-12.png" alt="놀이기구">
+                    <div class="att-desc">
+                        <h2 class="att-title">스카이 크루즈</h2>
+                        <h3 class="att-time"><i class="fa-regular fa-clock"></i>&nbsp; 09:50 - 22:00</h3>
+                    </div>
+                </div>
+                <div class="grid-item g13">
+                    <img src="img/attractions/att-13.png" alt="놀이기구">
+                    <div class="att-desc">
+                        <h2 class="att-title">범퍼카</h2>
+                        <h3 class="att-time"><i class="fa-regular fa-clock"></i>&nbsp; 09:50 - 22:00</h3>
+                    </div>
+                </div>
+                <div class="grid-item g14">
+                    <img src="img/attractions/att-14.png" alt="놀이기구">
+                    <div class="att-desc">
+                        <h2 class="att-title">사파리 월드</h2>
+                        <h3 class="att-time"><i class="fa-regular fa-clock"></i>&nbsp; 10:30 - 17:00</h3>
+                    </div>
+                </div>
+                <div class="grid-item g15">
+                    <img src="img/attractions/att-15.png" alt="놀이기구">
+                    <div class="att-desc">
+                        <h2 class="att-title">로스트 밸리</h2>
+                        <h3 class="att-time"><i class="fa-regular fa-clock"></i>&nbsp; 10:30 - 17:00</h3>
+                    </div>
+                </div>
+                <div class="grid-item g16">
+                    <img src="img/attractions/att-16.png" alt="놀이기구">
+                    <div class="att-desc">
+                        <h2 class="att-title">판다월드</h2>
+                        <h3 class="att-time"><i class="fa-regular fa-clock"></i>&nbsp; 11:00 - 17:00</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- footer -->
+        <footer>
+            <div class="footer-wrap">
+                <div class="footer-top">
+                    <ul class="footer-menu">
+                        <li><a href="#">에버랜드 소개</a></li>
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">개인정보</a></li>
+                        <li><a href="#">인재 채용</a></li>
+                        <li><a href="#">사이트맵</a></li>
+                        <li><a href="#">에버랜드 리조트 소개</a></li>
+                    </ul>
+                    <ul class="footer-sns">
+                        <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                    </ul>
+                </div>
+                <div class="footer-bottom">
+                    <div>
+                        <p>경기도 용인시 처인구 포곡읍 에버랜드로 199 삼성물산(주)</p>
+                        <p>대표이사 : 정해린 | 사업자등록번호 : 135-85-04288</p>
+                        <p>Copyright &copy; Samsung C&T Corporation.</p>
+                        <p>All right reservesd.</p>
+                    </div>
+                    <div>
+                        <p>통신판매업 신고번호 : 제2006-용인처인-0216호</p>
+                        <p>사업자정보확인</p>
+                    </div>
+                    
+                    <div class="kg-escrow">
+                        <a href="#"><img src="img/footer-img.png" alt="escrow"></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- 앱 다운로드 QR -->
+        <img src="img/c7.png" alt="쿠로미" class="app-top-img">
+        <div class="app-qr">
+            <p class="app-text">에버랜드 <br> 앱 다운로드</p>
+            <img src="img/app-qr.png" alt="qr" title="에버랜드 앱 다운로드 QR">
+        </div>
+        
+        <!-- 사이드 고정메뉴 -->
+        <div class="fix-right-menu">
+            <a href="event.html"><img src="img/event-fix.png" alt="이벤트"></a>
+            <img src="img/btn-top.png" alt="상단이동버튼" class="top-move">
+        </div>
+    </div>
+</body>
+</html>

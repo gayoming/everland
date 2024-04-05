@@ -3,23 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>메인</title>
+    <title>프로모션</title>
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">                   <!-- favicon -->
     <link rel="stylesheet" href="css/reset.css">                                                    <!-- reset -->
-    <link rel="stylesheet" href="css/jquery.bxslider.css">                                          <!-- bxslider css -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">     <!-- cardslide css -->
-    <link rel="stylesheet" type="text/css" href="css/style.css">                                    <!-- index css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />   <!-- cardslide css -->
+    <link rel="stylesheet" href="css/cardstyle.css">                                                <!-- index css -->
     <script src="https://kit.fontawesome.com/11ff5dd105.js" crossorigin="anonymous"></script>       <!-- fontawesome -->
     <script src="js/jquery-3.7.1.min.js" type="text/javascript"></script>                           <!-- jquery -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>             <!-- cardslide js -->
-    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>         <!-- bxslider js -->
-    <script src="js/script.js" type="text/javascript" defer></script>                               <!-- js script 공용 -->
-    <script src="js/index-slide.js" type="text/javascript" defer></script>                          <!-- js index page slide -->
+    <script src="js/script.js" type="text/javascript" defer></script>                               <!-- js script -->
+    <script src="js/slick.js" type="text/javascript" charset="utf-8"></script>                      <!-- slickslider js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>             <!-- swiper js -->
+    <script src="js/card.js" defer></script>                                                         <!-- cardslide js -->
 </head>
 <body>
-    <img src="img/lol.png" class="lol-1">
-    <img src="img/lol.png" class="lol-2">
-    
     <!-- wrap -->
     <div id="wrap">
 
@@ -87,7 +83,7 @@
                     <p class="current-time"></p>
                     <p>오늘의 파크</p>
                     <p class="time-bold">운영시간</p>
-                    <p class="time-bold t1">10:00-21:00</p>
+                    <p class="time-bold">10:00-21:00</p>
                 </div>
                 <div class="box2">
                     <a href="#"><img src="img/app.jpg" alt="앱다운로드"></a>
@@ -104,114 +100,58 @@
                 <div class="close-button"><i class="fa-solid fa-xmark"></i></div>
             </div>
         </header>
-
-        <!-- main slider -->
-        <main>
-            <div class="box">
-                <div class="bxslider">
-                  <div>
-                    <a href="sanrio-event.html"><img src="img/slide1.png" class="main-slider"></a>
-                  </div>
-                  <div>
-                    <img src="img/slide2.png" class="main-slider">
-                  </div>
-                  <div>
-                    <a href="pubao-event.html"><img src="img/slide3.png" class="main-slider"></a>
-                  </div>
-                  <div>
-                    <a href="pubao-emo.html"><img src="img/slide4.png" class="main-slider"></a>
-                  </div>
-                  <div>
-                    <img src="img/slide5.png" class="main-slider">
-                  </div>
-                </div>
+        <main id="cardwrap">
+            <h1>할인 / 혜택</h1>
+            <p>에버랜드가 여러분을 위해 준비한 다양한 할인혜택을 누리세요.</p>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src='img/sale1.png'>
+                <p>이달의 할인 카드</p>
+                <h1>32,400원</h1>
               </div>
+              <div class="swiper-slide">
+                <img src='img/sale2.png'>
+                <p>삼성카드 할인헤택</p>
+                <h1>31,000원</h1>
+              </div>
+              <div class="swiper-slide">
+                <img src='img/sale3.png'>
+                <p>제휴카드 프로모션</p>
+                <h1>최대45%할인</h1>
+              </div>
+              <div class="swiper-slide">
+                <img src='img/sale4.png'>
+                <p>LG U+ 멤버쉽</p>
+                <h1>32,000원</h1>
+              </div>
+              <div class="swiper-slide">
+                <img src='img/sale5.png'>
+                <p>자유 이용권 할인</p>
+                <h1>40,000원</h1>
+              </div>
+              <div class="swiper-slide">
+                <img src='img/sale6.png'>
+                <p>SKT 멤버쉽</p>
+                <h1>34,100원</h1>
+              </div>
+              <div class="swiper-slide">
+                <img src='img/sale7.png'>
+                <p>중고생 할인 혜택</p>
+                <h1>32,000원</h1>
+              </div>
+              <div class="swiper-slide">
+                <img src='img/sale8.png'>
+                <p>가정의 달 온가족 할인</p>
+                <h1>120,000원</h1>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+         <a class="btn" href="login.html">예매하기</a>
+          
         </main>
 
-        <!-- on time -->
-        <div class="on-time">
-            <img src="img/clock.png" alt="">
-            <p>오늘의 운영시간 &nbsp; <span class="t1">10:00 - 21:00</span></p>
-        </div>
-
-        <!-- attraction -->
-        <div id="attraction">
-            <img src="img/backgroundIMG.jpg" alt="">
-            <h1>어트랙션</h1>
-            <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide"></div>
-                  <div class="swiper-slide"></div>
-                  <div class="swiper-slide"></div>
-                  <div class="swiper-slide"></div>
-                  <div class="swiper-slide"></div>
-                </div>
-            </div>
-        </div>
-
-        <!-- sale -->
-        <div id="sale">
-            <h1>할인 혜택</h1>
-            <div class="card-wrap">
-                <div class="card c1">
-                    <img src="img/sale1.png">
-                    <p>32,400원</p>
-                    <h3>이달의 할인 카드</h3>
-                </div>
-                <div class="card c2">
-                    <img src="img/sale2.png">
-                    <p>31,000원</p>
-                    <h3>삼성카드 할인 혜택</h3>
-                </div>
-                <div class="card c3">
-                    <img src="img/sale3.png">
-                    <p>최대45%할인</p>
-                    <h3>제휴카드 프로모션</h3>
-                </div>
-                <div class="card c4">
-                    <img src="img/sale4.png">
-                    <p>32,000원</p>
-                    <h3>LG U+ 멤버쉽</h3>
-                </div>
-                <div class="card c5">
-                    <img src="img/sale5.png">
-                    <p>40,000원</p>
-                    <h3>자유 이용권 할인</h3>
-                </div>
-                <div class="card c6">
-                    <img src="img/sale6.png">
-                    <p>34,100원</p>
-                    <h3>SKT 멤버쉽</h3>
-                </div>
-                <div class="card c7">
-                    <img src="img/sale7.png">
-                    <p>32,000원</p>
-                    <h3>중고생 할인 혜택</h3>
-                </div>
-                <div class="card c8">
-                    <img src="img/sale8.png">
-                    <p>120,000원</p>
-                    <h3>가정의 달 온가족 할인</h3>
-                </div>
-            </div>
-        </div>
-
-        <!-- video -->
-        <div id="video">
-            <h1>에버랜드는 지금</h1>
-
-            <!-- screen -->
-            <div class="video-left">
-                <img class="screen" src="img/screen.png" alt="">
-                <video src="img/sanrio.mp4" muted autoplay loop></video>
-            </div>
-
-            <!-- link image -->
-            <div class="video-right">
-                <img id="sanrio" src="img/sanrio.jpg">
-                <a href="sanrio-event.html">이벤트 자세히 보기</a>
-            </div>
-        </div>
      
 
         <!-- footer -->
@@ -251,19 +191,19 @@
                 </div>
             </div>
         </footer>
-
-        <!-- 앱 다운로드 QR -->
-        <img src="img/c7.png" alt="쿠로미" class="app-top-img">
-        <div class="app-qr">
-            <p class="app-text">에버랜드 <br> 앱 다운로드</p>
-            <img src="img/app-qr.png" alt="qr" title="에버랜드 앱 다운로드 QR">
-        </div>
-
-        <!-- 사이드 고정메뉴 -->
-        <div class="fix-right-menu">
-            <a href="event.html"><img src="img/event-fix.png" alt="이벤트"></a>
-            <img src="img/btn-top.png" alt="상단이동버튼" class="top-move">
-        </div>
+         <!-- 앱 다운로드 QR -->
+         <img src="img/c7.png" alt="쿠로미" class="app-top-img">
+         <div class="app-qr">
+             <p class="app-text">에버랜드 <br> 앱 다운로드</p>
+             <img src="img/app-qr.png" alt="qr" title="에버랜드 앱 다운로드 QR">
+         </div>
+ 
+         <!-- 사이드 고정메뉴 -->
+         <div class="fix-right-menu">
+             <a href="event.html"><img src="img/event-fix.png" alt="이벤트"></a>
+             <img src="img/btn-top.png" alt="상단이동버튼" class="top-move">
+         </div>
+     </div>
     </div>
 </body>
 </html>
