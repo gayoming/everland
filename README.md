@@ -30,8 +30,8 @@ JS와 JQUERY, 플러그인을 사용해서 페이지를 제작했습니다.</br>
        $(".메인메뉴").mouseout(functhion() {
        $(".서브메뉴").stop().slideUp(300);})
 
-  +mouseout 은 마우스를 뗐을 때 이벤트 발생, mouseover와 마찬가지로 괄호 안에 함수 필수
-  +slideUp은 반대로 마우스를 뗐을 때 서브메뉴가 다시 들어갈 수 있게 해준다.
+  + mouseout 은 마우스를 뗐을 때 이벤트 발생, mouseover와 마찬가지로 괄호 안에 함수 필수
+  + slideUp은 반대로 마우스를 뗐을 때 서브메뉴가 다시 들어갈 수 있게 해준다.
   </br>
   </br>
 
@@ -65,8 +65,8 @@ JS와 JQUERY, 플러그인을 사용해서 페이지를 제작했습니다.</br>
     };
     let sss = setInterval(typing, 500);
 
-+변수를 선언해서 넣고 싶은 텍스트를 넣어준다 \n은 줄바꿈
-+변수를 선언해서 텍스트를 넣을 영역을 documentquertSelector("class나 id") 찾아준다.
++ 변수를 선언해서 넣고 싶은 텍스트를 넣어준다 \n은 줄바꿈
++ 변수를 선언해서 텍스트를 넣을 영역을 documentquertSelector("class나 id") 찾아준다.
 +변수를 선언해서 함수에 증가할 수 있는 값을 넣어준다 (0)
 +if문을 사용해서 content의 길이만큼 글자가 나타날 수 있게 함수를 작성해준다.
 
